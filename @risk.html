@@ -3,138 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enter</title>
+  <title>Full Page Image</title>
   <style>
-    * {
-      box-sizing: border-box;
+    html, body {
       margin: 0;
       padding: 0;
-    }
-
-    body, html {
       height: 100%;
-      background: black;
-      font-family: 'Courier New', monospace;
       overflow: hidden;
-      color: white;
     }
-
-    .enter-screen {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('https://files.catbox.moe/2f0z8v.png') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-      cursor: pointer;
-    }
-
-    .enter-screen h1 {
-      font-size: 3rem;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px 40px;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    .enter-screen:hover h1 {
-      transform: scale(1.05);
-    }
-
-    .main-content {
-      display: none;
-      width: 100%;
-      height: 100vh;
-      background: url('https://files.catbox.moe/2f0z8v.png') center/cover no-repeat;
-      backdrop-filter: blur(3px);
-      position: relative;
-    }
-
-    .cards {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      gap: 40px;
-      z-index: 1;
-      position: relative;
-    }
-
-    .card {
-      background: rgba(0, 0, 0, 0.8);
-      border-radius: 20px;
-      padding: 20px;
-      width: 200px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) rotate(-1deg);
-    }
-
-    .card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-
-    .name {
-      font-size: 1.4rem;
-      margin-bottom: 5px;
-    }
-
-    .status {
-      font-size: 1rem;
-      color: gray;
-    }
-
-    .static {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('file-Afmf8HFCs9FfGoFdmrtX9u') center/cover repeat;
-      mix-blend-mode: screen;
-      pointer-events: none;
-      opacity: 0.1;
-      z-index: 2;
+    body {
+      background: url('https://files.catbox.moe/pyyspo.png') no-repeat center center fixed;
+      background-size: cover;
     }
   </style>
 </head>
 <body>
-  <div class="enter-screen" onclick="startSite()">
-    <h1>Click to Enter</h1>
-  </div>
-
-  <div class="main-content">
-    <div class="cards">
-      <div class="card">
-        <img src="https://files.catbox.moe/67ncr8.jpg" alt="Liveleak PFP" />
-        <div class="name">dev</div>
-        <div class="status">Founder</div>
-      </div>
-      <div class="card">
-        <img src="https://files.catbox.moe/qwq4d0.jpg" alt="Slaughter PFP" />
-        <div class="name">Slaughter</div>
-        <div class="status">owner</div>
-      </div>
-    </div>
-    <div class="static"></div>
-  </div>
-
-  <audio id="bg-music" src="https://files.catbox.moe/fonlps.mp3" loop></audio>
-
-  <script>
-    function startSite() {
-      document.querySelector('.enter-screen').style.display = 'none';
-      document.querySelector('.main-content').style.display = 'block';
-      document.getElementById('bg-music').play();
-    }
-  </script>
 </body>
 </html>
